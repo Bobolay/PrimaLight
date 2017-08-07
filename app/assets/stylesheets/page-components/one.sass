@@ -112,3 +112,131 @@
     font-size: 16px
     color: white
     line-height: 1.75
+
+// ul.division-rest-list
+//   counter-reset: division-rest-list
+//   margin-bottom: 20px
+//   li
+//     position: relative
+//     counter-increment: division-rest-list
+//     margin-bottom: 20px
+//     &:before
+//       content: '0' counter(division-rest-list)
+//       font-size: 16px
+//       color: $grey400
+//       position: absolute
+//       top: 10px
+//       left: 0
+//     &:after
+//       content: ''
+//       position: absolute
+//       bottom: 10px
+//       left: 5px
+//       width: 0
+//       height: 0
+//       border-bottom: 20px solid $grey600
+//       border-left: 20px solid transparent
+//       z-index: -1
+//   a
+//     text-transform: uppercase
+//     color: $grey400
+//     padding: 10px 0 10px 50px
+//     font-weight: 700
+//     letter-spacing: 2px
+
+
+.scroll-nav-holder
+  position: relative
+.scroll-nav-container
+  .scroll-nav__section
+    border-bottom: 1px solid $grey800
+    margin-bottom: 50px
+    &:last-child
+      border-bottom: 0
+  .img-container
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.5)
+    &:after
+      content: ''
+      +fullsize
+      background: linear-gradient(transparent,transparent,rgba(0,0,0,0.5))
+    // .name
+    //   @extend %grot
+    //   position: absolute
+    //   text-transform: uppercase
+    //   font-size: 36px
+    //   color: white
+    //   text-align: center
+    //   width: 100%
+    //   bottom: 30px
+    //   font-weight: 700
+    //   z-index: 1
+  table
+    margin: 50px 0
+    caption
+      font-size: 18px
+      color: white
+      margin-bottom: 20px
+      text-align: left
+    td
+      padding: 5px 10px 5px 0
+      &:nth-child(odd)
+        color: $grey500
+
+.scroll-nav-container
+  position: relative
+  @media #{$large-up}
+    padding-left: 400px
+.scroll-nav
+  position: absolute
+  width: 300px
+  padding-bottom
+  padding: 0 20px
+  top: 0
+  left: 0
+  display: none
+  z-index: 1
+  @media #{$large-up}
+    display: block
+  &.fixed
+    position: fixed
+    top: 120px
+  .scroll-nav__heading
+    display: none
+
+  ol.scroll-nav__list
+    counter-reset: division-rest-list
+    margin-bottom: 20px
+    li
+      position: relative
+      counter-increment: division-rest-list
+      margin-bottom: 20px
+      &:before
+        content: '0' counter(division-rest-list)
+        font-size: 16px
+        color: $grey400
+        position: absolute
+        top: 10px
+        left: 0
+      &:after
+        content: ''
+        position: absolute
+        bottom: 10px
+        left: 5px
+        width: 0
+        height: 0
+        border-bottom: 20px solid $grey600
+        border-left: 20px solid transparent
+        z-index: -1
+    a
+      text-transform: uppercase
+      color: $grey400
+      padding: 10px 0 10px 50px
+      font-weight: 700
+      letter-spacing: 2px
+    .scroll-nav__item
+      &.active
+        &:before
+          color: $pink700
+          font-weight: 600
+        .scroll-nav__link
+          color: white

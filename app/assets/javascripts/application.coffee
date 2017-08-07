@@ -22,6 +22,7 @@
 #= require plugins/jquery.validate.min
 #= require plugins/messages_uk
 #= require plugins/form
+#= require plugins/jquery.scrollNav.min
 #= require keys
 
 #     I N I T I A L I Z E
@@ -34,6 +35,7 @@
 #= require menu_and_popups
 #= require accordion
 #= require tabs
+#= require scroll-nav-initialize
 #= require countdown
 #= require lightgallery
 #= require niceselect

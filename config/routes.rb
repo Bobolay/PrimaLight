@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get "special_offer_one", action: "special_offer_one"
       get "division_all", action: "division_all"
       get "division_one", action: "division_one"
+      get "division_rest", action: "division_rest"
       get "portfolio", action: "portfolio"
       get "contacts", action: "contacts"
       get "terms_of_use", action: "terms_of_use"

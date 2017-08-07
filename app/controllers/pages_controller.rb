@@ -23,6 +23,9 @@ class PagesController < ApplicationController
   def division_one
   end
 
+  def division_rest
+  end
+
   def portfolio
   end
 

@@ -1,0 +1,114 @@
+.one-top-part
+  text-align: center
+  .share-btn, .all-videos-link, .product-features-btn, .download-pdf
+    position: relative
+    display: inline-block
+    top: 20px
+    margin: 10px
+    left: initial
+    p
+      font-size: 10px
+    @media #{$small-only}
+      p
+        display: none
+    @media #{$large-up}
+      margin: 30px
+      top: initial
+      font-size: 12px
+  .product-features-btn
+    display: none
+    @media #{$large-up}
+      display: inline-block
+  .download-pdf
+    display: inline-block
+    @media #{$large-up}
+      display: none
+  .huge-title
+    margin: 50px auto 30px
+    width: 600px
+    max-width: 100%
+    @media #{$small-only}
+      margin: 40px auto 20px
+  .btn
+    margin: 50px 0 80px
+    @media #{$small-only}
+      margin: 30px auto 50px
+
+.one-main-part
+  +padding-bottom(60px,80px,100px,120px,110px)
+  .img-container
+    margin-bottom: 50px
+
+  .short-info-list
+    margin-bottom: 30px
+    @media #{$medium-only}
+      border-top: 1px solid rgba($grey50, 0.2)
+      border-bottom: 1px solid rgba($grey50, 0.2)
+    li
+      padding: 10px 0
+      border-top: 1px solid rgba($grey50, 0.2)
+      &:last-child
+        border-bottom: 1px solid rgba($grey50, 0.2)
+      @media #{$medium-only}
+        display: inline-block
+        width: 32%
+        border-top: 0
+        &:last-child
+          border-bottom: 0
+    .small
+      @extend %grot
+      color: $grey500
+      text-transform: uppercase
+      letter-spacing: 2px
+    .regular
+      color: $grey100
+      +medium
+      letter-spacing: 2px
+
+.one-wrap
+  position: relative
+  h2,h3,h4,h5,h6
+    margin-bottom: 30px
+    color: $grey100
+  p
+    font-size: 14px
+    margin-bottom: 20px
+    line-height: 1.75
+    color: $grey400
+    @media #{$small-only}
+      line-height: 1.5
+  .huge-title
+    @extend %grot
+    font-size: 48px
+    color: white
+    margin-bottom: 30px
+    line-height: 1
+    letter-spacing: 5px
+    text-transform: uppercase
+    @media #{$small-only}
+      font-size: 24px
+      margin-bottom: 20px
+    @media #{$medium-only}
+      font-size: 36px
+  .short-details
+    +bold
+    text-transform: uppercase
+    color: $grey100
+    span
+      text-transform: none
+      font-weight: normal
+      &:before
+        content: '//'
+        margin-right: 10px
+        margin-left: 10px
+
+  .bigger-text
+    p
+      font-size: 16px
+      color: $grey100
+
+.white-p
+  p
+    font-size: 16px
+    color: white
+    line-height: 1.75

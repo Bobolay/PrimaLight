@@ -1,0 +1,72 @@
+.slider-prev, .slider-next, .arrow-btn.prev, .arrow-btn.next
+  width: 36px
+  height: 36px
+  border: 2px solid $pink700
+  cursor: pointer
+  svg
+    fill: $grey300
+    stroke: $grey300
+    width: 100%
+    height: 100%
+    +transition(.25s)
+  &:hover
+    svg
+      +translate(0,0)
+  &.black
+    svg
+      fill: $grey900
+      stroke: $grey900
+.slider-prev, .arrow-btn.prev
+  svg
+    +translate(10px,0)
+.slider-next, .arrow-btn.next
+  svg
+    +translate(-10px,0)
+
+.controls-vertically
+  .slider-prev
+    +translate(-50%,0)
+    margin-top: 10px
+  .slider-next
+    +translate(50%,0)
+
+.banner-arrow-container
+  position: absolute
+  top: 50%
+  +translate(-50%,-50%)
+
+.pager-field
+  position: absolute
+  bottom: 0
+  left: 0
+.current-slide, .total-slide
+  font-size: 13px
+.current-slide
+  color: $grey50
+.total-slide
+  color: $grey400
+@keyframes move
+  from
+    +translate(-100%,0)
+  to
+    +translate(0,0)
+.progress-bar
+  position: relative
+  display: inline-block
+  overflow: hidden
+  width: 40px
+  height: 2px
+  margin: 0 10px
+  vertical-align: middle
+  background: $pink700
+  &:before
+    content: ''
+    +fullsize
+    top: 0
+    left: 0
+    background: $grey50
+    animation-duration: 5.5s
+    animation-iteration-count: infinite
+  &.animate
+    &:before
+      animation-name: move

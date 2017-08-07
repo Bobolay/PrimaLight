@@ -1,0 +1,63 @@
+= render "right_bar"
+
+.one-wrap
+
+  .one-top-part
+    .row
+      .columns
+        .top-part
+          .share-container
+            .share-btn
+              = inline_svg "svg/share.svg"
+              p поділитись
+            = render "share_window"
+          p.huge-title Забронюйте дату сьогодні
+          p Та гарантовано отримайте подарунок
+          .btn.order-btn отримати подарунок
+  .one-main-part
+    .row
+      .columns
+        .img-container style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+
+      .columns.large-4
+        .counter-container
+          p до кінця акції залишилось
+          #countdown.clearfix
+            .floated
+              .days
+              span днів
+            .floated
+              .hours
+              span годин
+            .floated
+              .minutes
+              span хвилин
+            .floated
+              .seconds
+              span секунд
+
+      .columns.large-7
+        .bigger-text
+          h2 деталі акції
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ullam illum necessitatibus sit unde minus modi dolores rerum, ut, provident quo, magni voluptatum quas cum expedita dignissimos dolorem. Deserunt, minus!
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut unde a dignissimos maiores esse debitis placeat error dolore natus, doloremque atque in enim, facilis quidem. Dignissimos error quisquam neque quo.
+          p Cum assumenda, et eum non labore magni, recusandae perspiciatis fuga illum vero quidem nobis vel? Officiis, nulla non voluptates quas deleniti, neque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum assumenda, et eum non labore magni, recusandae perspiciatis fuga illum vero quidem nobis vel? Officiis, nulla non voluptates quas deleniti, neque!
+
+form.order-form-container
+  .row
+    .columns.medium-10.medium-centered.large-8
+      p.title Отримати подарунок
+      .row
+        .columns.medium-6
+          .input-field
+            input placeholder="Ваше ім'я"
+          .input-field
+            input placeholder="Номер телефону"
+          .input-field
+            input.datepicker placeholder="Виберіть дату"
+            .icon = inline_svg "svg/calendar.svg"
+        .columns.medium-6
+          .input-field.textarea-field
+            textarea rows="7" placeholder="Додаткова інформація"
+        .button-holder
+          .curved-border-btn замовити

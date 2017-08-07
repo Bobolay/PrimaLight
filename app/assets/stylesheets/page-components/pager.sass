@@ -1,0 +1,40 @@
+.pager-holder
+  text-align: center
+  padding: 0 0 100px
+.pager
+  position: relative
+  border: 2px solid $grey700
+  padding: 0 50px
+  display: inline-block
+  height: 36px
+  margin: 0 auto
+  @media #{$medium-up}
+    padding: 0 100px
+  .arrow-btn
+    display: inline-block
+    &.prev
+      position: absolute
+      top: -2px
+      left: -2px
+    &.next
+      position: absolute
+      top: -2px
+      right: -2px
+  ul.pages
+    counter-reset: pager
+    li
+      display: inline-block
+      counter-increment: pager
+      font-size: 14px
+      +bold
+      color: $grey700
+      margin: 0 10px
+      line-height: 36px
+      cursor: pointer
+      +transition(.25s)
+      &:hover
+        color: $pink700
+      &:before
+        content: counter(pager)
+      &.active
+        color: $grey100

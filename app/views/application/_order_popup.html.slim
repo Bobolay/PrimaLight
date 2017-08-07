@@ -1,0 +1,25 @@
+.order-wrap
+
+  .close-popup-btn.order-form
+    = inline_svg "svg/cross.svg"
+
+  form.order-form-container
+    .row
+      .columns.medium-10.medium-centered.large-8
+        p.title Замовити
+        .row
+          .columns.medium-6
+            .input-field
+              input placeholder="Ваше ім'я" name="name"
+            .input-field
+              input placeholder="Номер телефону"
+            .input-field
+              input placeholder="Емейл" type="email" name="email"
+            .input-field
+              input.datepicker placeholder="Виберіть дату"
+              .icon = inline_svg "svg/calendar.svg"
+          .columns.medium-6
+            .input-field.textarea-field
+              textarea rows="7" placeholder="Додаткова інформація"
+          .button-holder
+            button.curved-border-btn замовити

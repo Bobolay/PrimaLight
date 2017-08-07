@@ -1,0 +1,446 @@
+.row.columns-left
+  .columns
+    float: left !important
+
+.clearfix
+  position: relative
+  +clearfix
+  .floated
+    float: left
+  .floated-right
+    float: right
+    
+.dib
+  display: inline-block
+  vertical-align: middle
+  line-height: 1
+
+.float-right
+  @media #{$medium-up}
+    float: right !important
+.float-left
+  @media #{$medium-up}
+    float: left !important
+
+.text-right
+  @media #{$large-up}
+    text-align: right
+
+.mobile
+  @media #{$medium-up}
+    display: none
+.desktop
+  @media #{$small-only}
+    display: none
+
+.hide
+  display: none
+
+.img-bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-position: center
+  background-size: cover
+  +transition(0.2s)
+
+.img-container
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 56%
+  background-position: center
+  background-size: cover
+
+.lighten
+  background-color: rgba(255,255,255,0.75)
+  background-blend-mode: lighten
+
+.darken
+  background-color: rgba(0,0,0,0.75)
+  background-blend-mode: darken
+
+.btn
+  display: inline-block
+  @extend %grot
+  position: relative
+  font-size: 12px
+  padding: 10px 30px
+  color: white
+  letter-spacing: 2px
+  text-transform: uppercase
+  font-weight: bold
+  z-index: 1
+  +curved
+  cursor: pointer
+  @media #{$small-only}
+    font-size: 10px
+    padding: 10px 20px
+  &:hover
+    color: $pink700
+    &:before
+      background: $grey100
+    svg
+      fill: $pink700
+
+.curved-border-btn
+  @extend .btn
+  &:before
+    background: transparent
+    border: 2px solid $pink700
+    +transition(.25s)
+  &:hover
+    color: $grey100
+    &:before
+      background: $pink700
+
+.play-btn
+  +centered-inside
+  width: 60px
+  height: 60px
+  cursor: pointer
+  svg
+    rect, path polygon
+      +transition(.25s)
+
+.share-btn, .product-features-btn, .all-videos-link, .download-pdf
+  position: relative
+  cursor: pointer
+  z-index: 1
+  p
+    @extend %grot
+    display: inline-block
+    font-size: 12px
+    color: $grey500
+    text-transform: uppercase
+    letter-spacing: 2px
+    +transition(.25s)
+  svg
+    fill: $grey500
+    position: relative
+    width: 24px
+    height: 24px
+    margin-right: 6px
+    top: 7px
+    +transition(.25s)
+  &:hover
+    p
+      color: white
+    svg
+      fill: white
+      
+.share-btn
+  margin: 10px
+
+.close-popup-btn
+  width: 60px
+  height: 60px
+  background: $pink700
+  position: absolute
+  top: 0
+  right: 0
+  +transition(.25s)
+  cursor: pointer
+  z-index: 2
+  svg
+    fill: $grey50
+    +centered-inside
+    width: 50%
+    height: 50%
+    +transition(.25s)
+  &:hover
+    background: $grey900
+    svg
+      fill: $pink700
+
+.tag
+  display: inline-block
+  position: relative
+  font-size: 12px
+  text-transform: uppercase
+  color: $grey50
+  +curved
+  cursor: pointer
+  margin: 1px
+  padding: 2px 15px
+  z-index: 1
+  pointer-events: initial
+  +transition(0.25s)
+  &:hover
+    color: $pink700
+    letter-spacing: 1px
+    &:before
+      background: $grey50
+
+.vertical-line
+  position: relative
+  width: 1px
+  height: 60px
+  background: $pink700
+  left: 50%
+  margin: 20px 0
+
+.socials
+  li
+    display: inline-block
+    line-height: 1
+  a
+    position: relative
+    width: 50px
+    height: 33px
+    z-index: 1
+    svg
+      polygon, path
+        +transition(.25s)
+    &:hover
+      svg
+        polygon
+          fill: $grey900
+        path
+          fill: $pink700
+
+.top-indent
+  +padding-top(100px,130px,150px,180px,150px)
+.bottom-indent
+  +padding-bottom(80px,110px,130px,160px,130px)
+
+.menu-btn
+  position: fixed
+  top: 20px
+  left: -20px
+  height: 50px
+  p
+    display: inline-block
+    font-size: 12px
+    letter-spacing: 3px
+    @media #{$small-only}
+      display: none
+  svg
+    position: relative
+    top: 5px
+    width: 20px
+    height: 20px
+    fill: white
+    margin-left: 20px
+    margin-right: 10px
+  &:hover
+    fill: $pink700
+
+.page-top
+  position: relative
+  z-index: 1
+  .huge-title
+    margin-bottom: 50px
+    @media #{$small-only}
+      font-size: 24px
+      margin-bottom: 30px
+    @media #{$medium-only}
+      font-size: 36px
+      margin-bottom: 40px
+  .regular
+    line-height: 1.75
+    margin-bottom: 30px
+  .top-indent.bottom-indent
+    @media #{$small-only}
+      padding-top: 0
+      padding-bottom: 0
+    @media #{$medium-only}
+      padding-top: 0
+      padding-bottom: 0
+  .curved-border-btn
+    margin-bottom: 30px
+    margin-left: 10px
+
+.big-curve-line
+  position: absolute
+  width: 100px
+  height: 100%
+  top: 0
+  right: 200px
+  +skew(-30deg,0)
+  background: $pink700
+  z-index: -1
+  @media #{$small-only}
+    display: none
+
+#animated-thumbnails
+  .lg-object
+    cursor: pointer
+    img
+      display: none
+
+.counter-container
+  position: relative
+  margin-bottom: 50px
+  p
+    font-size: 12px
+    color: $grey600 !important
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 10px !important
+  #countdown
+    padding: 10px 20px
+    background: $pink700
+    .floated
+      width: 25%
+      text-align: center
+    .days, .hours, .minutes, .seconds
+      @extend %grot
+      font-size: 36px
+      line-height: 1
+      @media #{$small-only}
+        font-size: 24px
+    span
+      font-size: 12px
+      text-transform: uppercase
+      color: $grey100
+    @media #{$small-only}
+      padding: 10px
+
+.offer-block
+  position: relative
+  margin-bottom: 50px
+  cursor: pointer
+  display: block
+  &:first-child
+    margin-top: 50px
+  &:last-child
+    margin-bottom: 120px
+  .img-bg
+    +transition(.5s)
+  .floated
+    position: relative
+    overflow: hidden
+    &.img-holder, &.text-holder
+      padding-bottom: 50%
+      @media #{$large-up}
+        padding-bottom: 40%
+    &.text-holder
+      @media #{$small-only}
+        padding-bottom: 100%
+    &.img-holder
+      width: 100%
+      @media #{$large-up}
+        width: 66%
+    &.text-holder
+      background: $grey100
+      width: 100%
+      @media #{$large-up}
+        width: 33%
+  .text
+    position: absolute
+    padding: 30px
+    @media #{$small-only}
+      padding: 20px
+  .offer-name
+    @extend %grot
+    font-size: 28px
+    color: $pink700
+    text-transform: uppercase
+    line-height: 1
+    @media #{$small-only}
+      font-size: 21px
+    @media #{$xxlarge-up}
+      font-size: 36px
+    span
+      display: inline-block
+      width: 30px
+      height: 30px
+      vertical-align: sub
+      margin-left: 20px
+      +transition(.5s)
+      +translate(-10px,0)
+      opacity: 0
+
+  .regular
+    color: $grey800
+
+  .counter-container
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    margin-bottom: 0
+    p
+      font-size: 10px
+      letter-spacing: 2px
+      +medium
+  &:hover
+    .img-bg
+      +scale(1.05)
+    .offer-name
+      span
+        opacity: 1
+        +translate(0,0)
+
+@keyframes anim-gradient
+  from
+    background-position: 0% 100%
+  to
+    background-position: 100% 0%
+
+.img-on-background
+  position: absolute
+  width: 100%
+  padding-bottom: 56%
+  background-position: center
+  background-size: cover
+
+.right-bar
+  position: fixed
+  width: 60px
+  height: 80px
+  top: 0
+  right: 0
+  background: $grey900
+  border-left: 1px solid rgba($grey50, .2)
+  border-bottom: 1px solid rgba($grey50, .2)
+  z-index: 3
+  a.logo
+    position: absolute
+    width: 40px
+    top: 20px
+    left: 10px
+  a.email
+    color: $grey400
+    font-size: 12px
+    +rotate(-90deg)
+    width: 140px
+    position: absolute
+    bottom: 100px
+    left: -40px
+    display: none
+    &:hover
+      color: $pink700
+  @media #{$xxlarge-up}
+    height: 100%
+    border-bottom: 0
+    a.email
+      display: block
+
+.pinterest-btn
+  display: inline-block
+  height: 30px
+  position: absolute
+  top: 30px
+  left: 30px
+  padding-left: 30px
+  padding-right: 10px
+  line-height: 30px
+  font-size: 14px
+  color: white
+  background: $pink700 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 3px 50% no-repeat
+  background-size: 20px
+  background-position: 5px center
+  cursor: pointer
+  display: none
+  z-index: 1
+  border: 2px transparent solid
+  +transition(0.3s border-color)
+  &:hover
+    border-color: white
+.square:hover
+  .pinterest-btn
+    display: block

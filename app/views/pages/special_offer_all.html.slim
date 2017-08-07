@@ -1,0 +1,61 @@
+= render "right_bar"
+
+.one-wrap
+
+  .one-top-part
+    p.huge-title акції
+
+  .row
+    .columns
+
+      a.offer-block.clearfix href=special_offer_one_path
+        .floated.img-holder
+          .img-bg style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+        .floated.text-holder
+          .text
+            p.offer-name
+              | Забронюйте дату сьогодні
+              span = inline_svg "svg/arrow-next-pink.svg"
+            p.regular Та гарантовано отримайте подарунок
+
+          .counter-container
+            p до кінця акції залишилось
+            #countdown.clearfix
+              .floated
+                .days
+                span днів
+              .floated
+                .hours
+                span годин
+              .floated
+                .minutes
+                span хвилин
+              .floated
+                .seconds
+                span секунд
+
+      a.offer-block.clearfix href=special_offer_one_path
+        .floated.img-holder
+          .img-bg style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+        .floated.text-holder
+          .text
+            p.offer-name
+              | Акція друга по рахунку
+              span = inline_svg "svg/arrow-next-pink.svg"
+            p.regular Та гарантовано отримайте знижку
+
+          .counter-container
+            p до кінця акції залишилось
+            #countdown.clearfix
+              .floated
+                .days
+                span днів
+              .floated
+                .hours
+                span годин
+              .floated
+                .minutes
+                span хвилин
+              .floated
+                .seconds
+                span секунд

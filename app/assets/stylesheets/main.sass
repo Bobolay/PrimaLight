@@ -1,0 +1,706 @@
+.about-us-wrapper
+  position: relative
+  +padding-top
+  +padding-bottom
+  .read-more
+    font-size: 10px
+    color: $grey500
+    position: absolute
+    padding: 10px
+    text-align: right
+    top: 30%
+    left: 50%
+    transform: translate(-50%,-50%) rotate(-90deg)
+    cursor: pointer
+    display: none
+    +transition(.25s)
+    @media #{$xlarge-up}
+      display: block
+    &:after
+      content: ''
+      display: block
+      width: 400px
+      height: 3px
+      background: linear-gradient(to right, #202020, #C1175A, #C1175A)
+    &:hover
+      color: white
+
+  .large-title
+    margin-bottom: 20px
+  .description
+    margin-top: 60px
+    line-height: 1.75
+    color: $grey100
+    @media #{$small-only}
+      margin-top: 20px
+
+.services-wrapper
+  position: relative
+  padding: 3px
+  +padding-bottom
+  .service
+    position: relative
+    width: calc(100% / 3 - 6px)
+    background: $grey800
+    margin: 3px
+    overflow: hidden
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.25)
+    &:before
+      content: ''
+      display: block
+      padding-bottom: 120%
+    @media #{$small-only}
+      width: calc(100% - 6px)
+      &:before
+        padding-bottom: 100%
+    .text
+      position: absolute
+      width: 100%
+      bottom: 50px
+      left: 0
+      text-align: center
+      @media #{$large-up}
+        bottom: 80px
+      @media #{$xxlarge-up}
+        bottom: 100px
+    .name
+      @extend %grot
+      font-size: 24px
+      text-transform: uppercase
+      letter-spacing: 10px
+      @media #{$medium-only}
+        font-size: 14px
+      @media #{$xxlarge-up}
+        font-size: 40px
+    .categories-qnty
+      color: $grey500
+    .hover-block
+      +fullsize
+      padding: 30px
+      text-align: center
+      background: linear-gradient(45deg, rgba($pink900, 1), rgba($pink600, 0.95), rgba($pink900, 1))
+      background-size: 200% 200%
+      background-position: 0% 100%
+      animation-name: anim-gradient
+      animation-duration: 4s
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+      animation-direction: alternate
+      +transition(transform .5s ceaser($easeOutCubic))
+      +translate(0,100%)
+      display: none
+      &:before
+        content: ''
+        display: block
+        +fullsize
+        background-image: asset_url(#{asset_path('photo/pattern-01-dark.png')})
+        opacity: 0.05
+        background-size: 200px
+      @media #{$large-up}
+        display: block
+      ul
+        counter-reset: service-list
+        margin-top: 20px
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 90%
+        +translate(-50%,-50%)
+        li
+          counter-increment: service-list
+          font-size: 16px
+          text-transform: uppercase
+          margin: 20px 0
+          letter-spacing: 3px
+          &:before
+            content: '0' counter(service-list)
+            display: block
+            @extend %grot
+            font-size: 26px
+            color: $grey900
+        @media #{$xxlarge-up}
+          margin-top: 30px
+          li
+            font-size: 18px
+
+    &:hover
+      .hover-block
+        +translate(0,0)
+
+.smart-asses-wrapper
+  position: relative
+  overflow: hidden
+  padding-bottom: 70%
+  @media screen and (max-width: 320px)
+    padding-bottom: 100%
+  @media #{$large-up}
+    padding-bottom: 40%
+  .slider-holder
+    +fullsize
+  .smart-asses-slider
+    li
+      position: relative
+      background-color: $pink700
+      background-blend-mode: multiply
+      background-position: center
+      background-size: cover
+      &:before
+        content: ''
+        display: block
+        padding-bottom: 50%
+  .bg-with-pattern
+    position: absolute
+    width: 80%
+    height: 80%
+    right: -10%
+    &:before
+      content: ''
+      display: block
+      +fullsize
+      +skew(-20deg,0)
+      background-color: $grey200
+    &:after
+      content: ''
+      display: block
+      +fullsize
+      background-image: asset_url(#{asset_path('photo/pattern-01-dark.png')})
+      opacity: 0.05
+      +skew(-20deg,0)
+      background-size: 200px
+    @media #{$small-only}
+      width: 100%
+      height: 100%
+      right: initial
+      &:before
+        +skew(0,0)
+      &:after
+        +skew(0,0)
+
+  .slide-text-container
+    position: absolute
+    top: 50%
+    +translate(0,-50%)
+    width: 80%
+    height: 200px
+    padding-left: 200px
+    left: -80px
+    &.visible
+      z-index: 1
+      .img-bg
+        opacity: 1
+      .large-title-italic, .author
+        opacity: 1
+    @media #{$small-only}
+      width: 100%
+      padding-left: initial
+      padding: 30px 10px
+      left: initial
+      top: initial
+      +translate(0,0)
+      .large-title-italic
+        font-size: 18px
+
+  .avatar
+    position: absolute
+    top: 0
+    left: 0
+    width: 160px
+    height: 160px
+    border-radius: 50%
+    background: $grey900
+    overflow: hidden
+    .img-bg
+      +transition(opacity 1s)
+      opacity: 0
+    @media #{$small-only}
+      display: none
+  .large-title-italic
+    margin-bottom: 50px
+    opacity: 0
+    +transition(opacity 1s)
+    &:before
+      content: '\0022'
+      font-size: 50px
+      color: $grey300
+      position: absolute
+      +translate(-100%,0)
+      padding-right: 10px
+      font-style: normal
+  .author
+    color: $pink700
+    text-transform: uppercase
+    opacity: 0
+    +transition(opacity 1s)
+    span
+      color: $grey600
+      text-transform: none
+      &:before
+        content: '//'
+        margin: 0 10px
+  .controls-vertically
+    position: absolute
+    bottom: 100px
+    right: 20%
+    z-index: 1
+    @media #{$small-only}
+      bottom: 20px
+      right: 30px
+    @media #{$xxlarge-up}
+      bottom: 200px
+
+.video-gallery-wrapper
+  +padding-top
+  +padding-bottom
+  .section-title
+    margin-bottom: 50px
+    @media #{$small-only}
+      margin-bottom: 0
+  .curved-border-btn
+    +x-align
+    margin-top: 50px
+  .share-btn
+    margin-bottom: 30px
+
+.video-row
+  +padding-bottom(50px,60px,70px,90px,80px)
+  &:last-child
+    padding-bottom: 0
+
+.video-wrap
+  position: relative
+  width: 100%
+  cursor: pointer
+  margin-bottom: 30px
+  @media #{$small-only}
+    margin-bottom: 0
+  &:hover
+    .play-btn
+      svg
+        rect
+          fill: $pink700
+        polygon
+          fill: white
+  .video
+    position: relative
+    padding-bottom: 56%
+    height: 0
+    pointer-events: none
+    iframe
+      +fullsize
+    &.playing
+      pointer-events: initial
+  .video-cover
+    position: absolute
+    width: 100%
+    height: 0
+    padding-bottom: 56%
+    top: 0
+    left: 0
+    background-position: center
+    background-size: cover
+    margin-bottom: 40px
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3)
+    pointer-events: none
+    +transition(opacity 2s)
+    &.hidden
+      opacity: 0
+    &:before
+      +gradient
+    .play-btn
+      width: 40px
+      height: 40px
+      pointer-events: none
+    .text
+      position: absolute
+      bottom: 20px
+      left: 20px
+
+    .name
+      display: none
+      @media #{$medium-up}
+        display: block
+
+  & ~ .name
+    margin: 10px 0
+    @media #{$medium-up}
+      display: none
+  & ~ .tag
+    top: -20px
+    left: 5px
+    @media #{$small-only}
+      top: 0
+      &:last-child
+        margin-bottom: 30px
+
+  &.full
+    & ~ .tag
+      display: inline-block
+      margin-top: 0
+      @media #{$large-up}
+        display: none
+    .video-cover
+      .tag
+        display: none
+        @media #{$large-up}
+          display: inline-block
+    .play-btn
+      @media #{$large-up}
+        width: 80px
+        height: 80px
+    .name
+      @media #{$large-up}
+        font-size: 48px
+        margin-bottom: 20px
+    .text
+      @media #{$large-up}
+        bottom: 30px
+        left: 30px
+      @media #{$xxlarge-up}
+        bottom: 40px
+        left: 40px
+
+.social-wrapper
+
+  .title
+    @extend %grot
+    font-size: 44px
+    color: white
+    text-align: center
+    span
+      color: $pink700
+    @media #{$small-only}
+      font-size: 24px
+
+.about-banner
+  position: relative
+  overflow: hidden
+  height: 100vh
+  .text-container
+    position: absolute
+    left: 50%
+    +translate(-50%,0)
+    width: 900px
+    max-width: 100%
+    bottom: 0
+    padding: 10px 10px 0 10px
+    text-align: center
+
+  .subtitle
+    position: relative
+    color: $grey100
+    text-transform: uppercase
+  .large-title
+    color: $grey100
+    margin-bottom: 20px
+    @media #{$small-only}
+      font-size: 21px
+  .smaller
+    color: $grey400
+    margin-bottom: 50px
+    @media #{$small-only}
+      margin-bottom: 20px
+  .bottom-line
+    width: 2px
+    height: 120px
+    background: $pink700
+    margin: 0 auto
+    @media #{$small-only}
+      height: 60px
+
+.slogan-wrap
+  position: relative
+  padding-top: 80px
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 70%
+    top: 0
+    left: 0
+    background: linear-gradient(to right, #880e4f, #C1175A)
+    z-index: -1
+    @media #{$small-only}
+      height: calc(100% + 20px)
+    @media #{$medium-only}
+      height: calc(100% + 30px)
+  .author-img
+    position: relative
+    padding-bottom: 125%
+    background-position: center
+    background-size: cover
+    svg
+      position: absolute
+      width: 100px
+      right: 20px
+      bottom: 0
+      @media #{$xlarge-up}
+        width: 200px
+        +translate(50%,0)
+        right: 0
+        bottom: 30px 
+  .slogan
+    @extend %grot
+    font-style: italic
+    font-size: 30px
+    color: $grey100
+    margin-bottom: 50px
+    &:before
+      content: '\0022'
+      font-size: 50px
+      color: $grey900
+      position: absolute
+      +translate(-100%,0)
+      padding-right: 10px
+    @media #{$small-only}
+      font-size: 21px
+      margin-top: 20px
+    @media #{$medium-only}
+      font-size: 24px
+  .author
+    color: $grey100
+    text-transform: uppercase
+    +bold
+    span
+      text-transform: none
+      font-weight: normal
+      &:before
+        content: '//'
+        margin: 0 10px
+
+.partner-wrap
+  +padding-top(60px,80px,100px,120px,90px)
+  +padding-bottom(60px,80px,100px,120px,90px)
+
+  .title
+    @extend %grot
+    font-size: 44px
+    position: relative
+    color: $grey100
+    text-align: center
+    line-height: 1
+    &:after
+      content: ''
+      display: block
+      width: 1px
+      height: 60px
+      background: $pink700
+      margin: 20px auto
+    @media #{$small-only}
+      font-size: 36px
+  .partner-icon
+    position: relative
+    width: 150px
+    max-width: 100%
+    height: initial
+    margin: 0 auto 50px
+    svg
+      width: 90%
+      height: 90%
+      +centered-inside
+      fill: $grey600
+    &:before
+      +square
+    @media #{$small-only}
+      margin: 0 auto 20px
+
+.faq-wrap
+  +padding-top
+  +padding-bottom
+
+.contact-list
+  margin: 100px 0
+  @media #{$small-only}
+    margin: 60px 0
+  @media #{$medium-only}
+    margin: 80px 0
+  li
+    display: inline-block
+    width: calc(100% / 3)
+    text-align: center
+    border-right: 1px solid $pink700
+    padding: 20px 0
+    vertical-align: top
+    &:last-child
+      border-right: 0
+      border-bottom: 0
+    @media #{$small-only}
+      width: 100%
+      border-right: 0
+      border-bottom: 1px solid $pink700
+  .contact
+    @extend %grot
+    font-size: 24px
+    color: $grey100
+    margin-bottom: 10px
+    @media #{$small-only}
+      margin-bottom: 10px
+  .smaller
+    color: $grey400
+
+.map-wrap
+  position: relative
+  padding-bottom: 50%
+  box-shadow: 10px 15px 20px rgba(0,0,0,0.3)
+  @media #{$small-only}
+    padding-bottom: 70%
+
+.social-link-on-pink
+  margin: -30px 0 100px
+  padding: 100px 0
+  text-align: center
+  background: linear-gradient(to right, $pink900, $pink700)
+  @media #{$small-only}
+    padding: 80px 0 50px
+  .title
+    @extend %grot
+    font-size: 24px
+    color: $grey100
+    margin-bottom: 20px
+  ul
+    margin-top: 30px
+  li
+    display: inline-block
+    margin: 0 30px
+    @media #{$small-only}
+      display: block
+      margin: 10px 0
+  a
+    font-size: 12px
+    +bold
+    text-transform: uppercase
+    color: $grey100
+    letter-spacing: 2px
+    +transition(.25s)
+    &:before
+      content: '\2013'
+      margin-right: 5px
+    &:hover
+      color: $grey900
+
+.division-wrap
+  +padding-top(100px,120px,140px,160px,150px)
+  +padding-bottom
+  
+  .fixed-block
+    position: relative
+    @media screen and (min-width:1920px)
+      position: fixed
+      max-width: 500px
+      width: inherit
+
+  .bg-letter
+    @extend %grot
+    position: absolute
+    font-size: 800px
+    line-height: 600px
+    color: black
+    opacity: 0.3
+    top: 0
+    left: 0
+    z-index: -1
+    display: none
+    @media #{$large-up}
+      display: block
+
+  ul.division-list
+    counter-reset: division-list
+    margin-top: 50px
+    @media #{$large-up}
+      margin-top: 0
+    li
+      position: relative
+      counter-increment: division-list
+      margin-bottom: 40px
+      &:before
+        content: '0' counter(division-list)
+        @extend %grot
+        font-size: 80px
+        color: $grey800
+        position: absolute
+        top: 50%
+        left: 0
+        top: 50%
+        transform: translate(-70%,-50%) rotate(-90deg)
+        line-height: 1
+        display: none
+        @media #{$large-up}
+          display: block
+      @media #{$small-only}
+        margin-bottom: 20px
+
+    a.list-block
+      position: relative
+      width: 100%
+      padding-bottom: 37%
+      overflow: hidden
+      &:after
+        +gradient-to-right
+      &:hover
+        .img-bg
+          +scale(1.05)
+        .arrow-btn
+          svg
+            +translate(0,0)
+    .img-bg
+      +transition(transform 0.5s)
+  .name
+    position: absolute
+    @extend %grot
+    font-size: 36px
+    color: $grey100
+    text-transform: uppercase
+    margin: 30px
+    letter-spacing: 2px
+    line-height: 1
+    z-index: 1
+    @media #{$small-only}
+      font-size: 21px
+      margin: 20px
+    @media #{$large-up}
+      font-size: 24px
+  .arrow-btn
+    position: absolute
+    right: 20px
+    bottom: 20px
+
+.not-found-wrap
+  position: relative
+  height: 100vh
+  .img-block
+    position: relative
+    width: 100%
+    padding-bottom: 60%
+    .bg-main, .bg-hover
+      +fullsize
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+    .bg-main
+      opacity: 0.2
+    .bg-hover
+      opacity: 0
+      +transition(.35s)
+    &:hover
+      .bg-hover
+        opacity: 1
+        +transition(.5s)
+  .inner
+    +xy-align
+    width: 800px
+    max-width: 100%
+    text-align: center
+    +padding-bottom
+  .oops
+    position: relative
+    @extend %grot
+    font-size: 21px
+    color: $grey100
+    text-transform: uppercase
+    padding-bottom: 10px
+    letter-spacing: 2px
+    margin-top: -10%
+  .regular
+    position: relative
+    color: $grey400
+    padding-bottom: 30px

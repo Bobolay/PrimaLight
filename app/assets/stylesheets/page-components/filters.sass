@@ -1,0 +1,21 @@
+.video-filter
+  position: relative
+  height: 60px
+  background: $grey100
+  margin-bottom: 30px
+  +clearfix
+
+  .videos-qnty
+    float: right
+    font-size: 13px
+    color: $grey600
+    line-height: 60px
+    padding-right: 20px
+    span
+      @extend %grot
+      font-size: 24px
+      color: $pink700
+      margin-right: 6px
+
+  @media #{$small-only}
+    height: auto

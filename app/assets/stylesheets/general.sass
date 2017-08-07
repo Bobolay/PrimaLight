@@ -1,0 +1,96 @@
+html
+  height: 100%
+body
+  min-height: 100%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  color: white
+  background: $grey900
+  font-family: 'Fira Mono', monospace
+  .main-wrapper
+    flex: 1
+  &.hidden
+    overflow: hidden
+
+@each $header, $font-size in (h1: 28px, h2: 24px, h3: 22px, h4: 20px, h5: 18px, h6: 16px)
+  #{$header}, .#{$header}
+    font-size: $font-size
+    text-transform: uppercase
+
+h1,h2
+  @extend %grot
+
+p
+  font-size: 16px
+
+a
+  display: inline-block
+  cursor: pointer
+  +transition(0.25s)
+
+ul
+  position: relative
+  list-style: none
+
+ol
+  position: relative
+  counter-reset: list
+  li
+    counter-increment: list
+    &:before
+      content: counter(list) "."
+
+img
+  width: 100%
+
+.small
+  font-size: 0.75rem
+.smaller
+  font-size: 0.875rem
+.regular
+  font-size: 1rem
+.larger
+  font-size: 1.125rem
+.large
+  font-size: 1.25rem
+.with-bottom-line
+  margin-bottom: 20px
+  &:after
+    content: ''
+    display: block
+    width: 60px
+    height: 1px
+    background: $pink700
+    margin: 20px auto
+
+.large-title
+  @extend %grot
+  font-size: 24px
+  line-height: 1
+  text-transform: uppercase
+  @media #{$small-only}
+    font-size: 21px
+  @media #{$xxlarge-up}
+    font-size: 36px
+
+.large-title-italic
+  @extend .large-title
+  color: $pink700
+  font-style: italic
+  &.white
+    color: white
+
+.huge-title
+  @extend %grot
+  font-size: 48px
+  line-height: 1
+  text-transform: uppercase
+
+.section-title
+  color: $grey600
+  letter-spacing: 10px
+  text-align: center

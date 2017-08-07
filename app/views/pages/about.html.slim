@@ -1,0 +1,45 @@
+= render "right_bar"
+
+.about-banner
+
+  .img-bg style="background-image: url(#{asset_path('photo/pl-about-banner-1.jpg')})"
+  .text-container
+    p.subtitle.with-bottom-line про Primolight
+    p.large-title Займаємось організаціми та технічним забезпеченням урочистих подій з 2009 року
+    p.smaller В наш час різноманітні спеціальні ефекти оточують нас на кожному кроці. І, в більшості випадків, ми навіть не звертаємо на це уваги, бо вони настільки стали частиною нашого життя.
+    .bottom-line
+
+.slogan-wrap
+
+  .row
+    .columns.medium-5.large-5
+      .author-img style="background-image: url(#{asset_path('photo/slogan-img.jpg')})"
+        = inline_svg "svg/author-sign.svg"
+    .columns.medium-7.large-6
+      p.slogan А сегодня в завтрашний день не все могут смотреть... Вернее смотреть могут не только лишь все, мало кто может это делать
+      p.author
+        | роман павлюст
+        span Директор
+
+.partner-wrap
+
+  .row
+    .columns
+      p.title Наші партнери
+      .row.columns-left
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner1.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner2.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner3.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner4.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner3.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner1.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner4.svg"
+        .columns.small-6.medium-4.large-3
+          .partner-icon = inline_svg "svg/partner2.svg"

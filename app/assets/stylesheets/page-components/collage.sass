@@ -1,0 +1,78 @@
+.collage-wrapper
+  position: relative
+  +padding-bottom
+
+  .collage-container
+    margin: 10px -10px
+
+  // .hide
+  //   display: none
+  //   @media #{$xlarge-up}
+  //     display: block
+
+  .floated
+    position: relative
+    width: 100%
+    overflow: hidden
+    @media #{$xlarge-up}
+      width: 50%
+
+  .square
+    float: left
+    position: relative
+    width: calc(50% - 20px)
+    margin: 10px
+    overflow: hidden
+    background-position: center
+    background-size: cover
+    @media #{$small-only}
+      width: calc(100% - 20px)
+    &:after
+      +square
+    &.fullwidth
+      width: calc(100% - 20px)
+    &:hover
+      .hover-block
+        +translate(0,0)
+
+  .hover-block
+    +fullsize
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    padding: 20px
+    background: linear-gradient(45deg, rgba($pink900, 1), rgba($pink600, 0.95), rgba($pink900, 1))
+    background-size: 200% 200%
+    background-position: 0% 100%
+    animation-name: anim-gradient
+    animation-duration: 4s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    animation-direction: alternate
+    +transition(transform .5s ceaser($easeOutCubic))
+    +translate(0,100%)
+    @media #{$small-only}
+      background: linear-gradient(45deg, rgba($pink900, 1), rgba($pink600, 0.85), rgba($pink900, 1))
+      +translate(0,0)
+    @media #{$medium-only}
+      background: linear-gradient(45deg, rgba($pink900, 1), rgba($pink600, 0.85), rgba($pink900, 1))
+      +translate(0,0)
+
+  .social-tag
+    @extend %grot
+    font-size: 24px
+    margin-bottom: 10px
+  .main-text
+    font-size: 12px
+    color: $grey100
+  .social-icon
+    position: absolute
+    bottom: 20px
+    right: 20px
+    width: 30px
+    height: 30px
+    z-index: 2
+    svg
+      fill: $grey900
+

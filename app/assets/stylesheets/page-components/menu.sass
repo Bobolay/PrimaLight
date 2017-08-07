@@ -1,0 +1,167 @@
+.menu-wrap
+  position: fixed
+  width: 100%
+  height: 100vh
+  overflow: auto
+  background: linear-gradient(45deg, rgba($pink900, 1), rgba($pink600, 1), rgba($pink900, 1))
+  background-size: 200% 200%
+  background-position: 0% 100%
+  animation-name: anim-gradient
+  animation-duration: 4s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  animation-direction: alternate
+  z-index: 11
+  +padding-top(100px,180px,140px,200px,150px)
+  display: none
+  &.opened
+    display: block
+  .menu-top
+    background: white
+    position: fixed
+    width: 100%
+    height: 50px
+    top: 20px
+    left: 0
+    display: flex
+    z-index: 2
+    padding-right: 10px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      +translate(0,-100%)
+      background: $pink700
+  .close-menu
+    position: relative
+    padding: 15px 25px 15px 30px
+    @extend %grot
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 2px
+    z-index: 1
+    left: -10px
+    cursor: pointer
+    &:before
+      content: ''
+      display: block
+      +fullsize
+      +skew(-20deg,0)
+      background: black
+      z-index: -1
+    p
+      display: inline-block
+    svg
+      width: 20px
+      height: 20px
+      vertical-align: top
+      margin-right: 10px
+      fill: white
+    &:hover
+      color: $pink700
+      svg
+        fill: $pink700
+    @media #{$small-only}
+      p
+        display: none
+  .social-container
+    margin-left: auto
+  .hashtag
+    display: inline-block
+    position: relative
+    top: -3px
+    font-size: 12px
+    color: $pink700
+    letter-spacing: 1px
+    span
+      color: $grey900
+    @media #{$small-only}
+      display: none
+  .socials
+    display: inline-block
+    padding: 10px 20px 10px 30px
+    vertical-align: middle
+    @media #{$small-only}
+      padding: 10px 0
+  .menu-links-wrap
+    ul
+      counter-reset: menu-links
+      margin-bottom: 20px
+    li
+      position: relative
+      counter-increment: menu-links
+      &:before
+        content: '0' counter(menu-links)
+        font-size: 30px
+        color: $grey900
+        +medium
+        position: absolute
+        top: 0
+        @media #{$small-only}
+          font-size: 18px
+      &:after
+        content: ''
+        position: absolute
+        bottom: 15px
+        left: 15px
+        width: 0
+        height: 0
+        border-bottom: 20px solid white
+        border-left: 20px solid transparent
+        z-index: -1
+        @media #{$small-only}
+          bottom: 10px
+          left: 10px
+          border-bottom: 10px solid white
+          border-left: 10px solid transparent
+      @media #{$small-only}
+        margin-bottom: 10px
+      @media screen and (min-width: 1920px)
+        margin-bottom: 20px
+
+    a
+      @extend %grot
+      position: relative
+      font-size: 32px
+      color: $grey100
+      padding-left: 60px
+      text-transform: uppercase
+      letter-spacing: 5px
+      z-index: 1
+      &:hover
+        color: $grey900
+      @media #{$small-only}
+        font-size: 20px
+      @media #{$xxlarge-up}
+        font-size: 36px
+        letter-spacing: 8px
+
+  .right-part
+    padding: 0 .625rem 30px
+
+    @media #{$medium-up}
+      +padding-top(100px,180px,140px,200px,150px)
+      padding-right: 50px
+      position: absolute
+      right: 0
+      top: 0
+    .title
+      @extend %grot
+      color: $grey900
+      font-style: italic
+      text-transform: uppercase
+      margin-top: 30px
+      margin-bottom: 10px
+      &:first-child
+        margin-top: 10px
+    .small
+      display: block
+      margin: 15px 0
+      color: white
+    a.small
+      &:hover
+        color: $grey900

@@ -1,0 +1,63 @@
+.btn.menu-btn title="Відкрити/закрити меню"
+  = inline_svg "svg/catalogue.svg"
+  p меню
+
+.main-banner-wrapper
+
+  .img-bg.visible style="background-image: url(#{asset_path('photo/main-banner-bg-1.jpg')})"
+  .img-bg style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+  .img-bg style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+
+  a.hashtag
+    span # 
+    | Prolightshows
+  .right-part
+    a.logo href=root_path title="Повернутись на головну сторінку"
+      = inline_svg "svg/logo-full.svg"
+    a.email href="mailto:prolight@gmail.com" title="Надіслати нам листа"
+      | Prolight@gmail.com
+    .banner-arrow-container.controls-vertically
+      .slider-next = inline_svg "svg/arrow-next.svg"
+      .slider-prev = inline_svg "svg/arrow-prev.svg"
+
+  .slider-wrapper
+    .row
+      .columns.medium-9.large-4.large-push-1.description-block-holder
+        .banner-description-block
+          .number
+          a.slide-title.textillate href=division_all_path data-html="<span>спец</span><span>ефекти</span>" 
+            | спецефекти
+          .slide-description Спільна назва технологічних прийомів в кінематографі, на телебаченні і в відеоіграх, що застосовується для візуалізації сцен, які не можуть бути зняті звичайним способом.
+        .banner-description-block
+          .number
+          a.slide-title.textillate href=division_all_path data-html="<span>відео</span><span>зйомка</span>"
+            | відеозйомка
+          .slide-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora hic ab. Praesentium nam aliquid veniam minus soluta officiis perferendis.
+        .banner-description-block
+          .number
+          a.slide-title.textillate href=division_all_path data-html="<span>зйомка</span><span>відео</span>"
+            | звук
+          .slide-description Non maxime, ipsum asperiores consequuntur odio repellat vel, laudantium ab. Dignissimos sapiente adipisci recusandae quos reprehenderit.
+      .columns.large-8.large-pull-1
+        ul.banner-slider
+          li style="background-image: url(#{asset_path('photo/main-banner-bg-1.jpg')})"
+            .pager-field
+              span.current-slide 01
+              span.progress-bar.animate
+              span.total-slide
+            a.btn href=division_one_path
+              | детальніше 
+          li style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+            .pager-field
+              span.current-slide
+              span.progress-bar
+              span.total-slide
+            a.btn href=division_one_path
+              | детальніше 
+          li style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+            .pager-field
+              span.current-slide
+              span.progress-bar
+              span.total-slide
+            a.btn href=division_one_path
+              | детальніше 

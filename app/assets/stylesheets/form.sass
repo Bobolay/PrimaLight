@@ -1,0 +1,120 @@
+form
+  position: relative
+  .input-field
+    position: relative
+    margin: 20px 0
+    border: 2px solid $grey800
+    input, textarea, select
+      font-size: 12px
+      color: $grey500
+      display: block
+      height: 36px
+      padding: 10px
+      width: 100%
+      background: transparent
+      border: none
+      outline: none
+      &:focus
+        outline: none
+    textarea
+      height: 216px
+    .icon
+      width: 24px
+      height: 24px
+      position: absolute
+      right: 5px
+      top: 5px
+      z-index: -1
+      svg
+        fill: $grey500
+
+.order-form-container
+  padding-bottom: 180px
+  @media #{$small-only}
+    padding-bottom: 80px
+  .title
+    @extend %grot
+    font-size: 30px
+    color: $grey100
+    text-align: center
+    line-height: 1
+    margin-bottom: 10px
+    @media #{$small-only}
+      font-size: 24px
+    @media #{$xxlarge-up}
+      font-size: 44px
+      margin-bottom: 30px
+  .textarea-field
+    @media #{$small-only}
+      margin-top: 0
+  .button-holder
+    text-align: right
+  .curved-border-btn
+    right: 20px
+
+
+form.footer-form
+  z-index: 1
+  overflow: hidden
+  margin-top: -20px
+  @media #{$medium-only}
+    width: 50%
+  .input-field 
+    display: inline-block
+    vertical-align: middle
+    width: calc(100% - 55px)
+    height: 36px
+    border: 0
+    input
+      background: transparent
+      &::-webkit-input-placeholder
+        color: $grey600
+      &::-moz-placeholder
+        color: $grey600
+      &:-ms-input-placeholder
+        color: $grey600
+      &:-moz-placeholder
+        color: $grey600
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: -20px
+      width: calc(100% + 20px)
+      height: 100%
+      +skew(-20deg,0)
+      background: $grey400
+      z-index: -1
+  button
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    width: 50px
+    height: 36px
+    margin-left: 5px
+    padding: 0 10px
+    svg
+      position: relative
+      top: 2px
+      fill: $grey100
+      +transition(.25s)
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: calc(100% + 20px)
+      height: 100%
+      +skew(-20deg,0)
+      background: $grey900
+      z-index: -1
+    &:hover
+      svg
+        +translate(6px,0)
+
+label.error
+  position: absolute
+  font-size: 12px
+  color: $pink700

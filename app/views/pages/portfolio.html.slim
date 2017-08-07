@@ -1,0 +1,105 @@
+.img-on-background style="background-image: url(#{asset_path('photo/pro-light-banner-v2-portfolio.png')})"
+
+= render "right_bar"
+
+.page-top
+  .row
+    .columns.large-4
+      .top-indent
+        p.huge-title відео галерея
+    .columns.large-5
+      .top-indent.bottom-indent
+        p.regular Среда изотропно расщепляет кварк. Вселенная вертикально сжимает взрыв. Под воздействием переменного напряжения солитон отклоняет межатомный экситон, поскольку любое другое поведение нарушало бы изотропность пространства.
+
+.video-gallery-wrapper
+  .row.columns-left.multiple-filter-container
+    .columns
+      .video-filter
+        select.select-filter data-prop-name="data-effect"
+          option value="" data-display="Ефект" весь дим
+          option value="1" Some option
+          option value="2" Another option
+          option value="3" A option
+          option value="4" Potato
+        select.select-filter data-prop-name="data-place"
+          option value="" data-display="Місце" всі заклади
+          option value="1" Some option
+          option value="2" Another option
+          option value="3" A option
+          option value="4" Potato
+        select.select-filter data-prop-name="data-event"
+          option value="" data-display="Подія" всі концерти
+          option value="1" Some option
+          option value="2" Another option
+          option value="3" A option
+          option value="4" Potato
+
+        .videos-qnty
+          span 79
+          | відео
+
+    .columns.large-4.target-block data-effect="1" data-place="1" data-event="1"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-1.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+    .columns.large-4.target-block data-effect="2" data-place="2" data-event="2"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+    .columns.large-4.target-block data-effect="1" data-place="2" data-event="3"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+    .columns.large-4.target-block data-effect="2" data-place="3" data-event="4"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+    .columns.large-4.target-block data-effect="4" data-place="1" data-event="2"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-5.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+    .columns.large-4.target-block data-effect="4" data-place="3" data-event="4"
+      .video-wrap
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+        .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-6.jpg')})"
+          .play-btn = inline_svg "svg/play-button.svg"
+          .text
+            .name Name of video medium-up
+      .name Name of video small-only name of video small-only
+
+.pager-holder
+  .pager
+    .arrow-btn.prev = inline_svg "svg/arrow-prev.svg"
+    .arrow-btn.next = inline_svg "svg/arrow-next.svg"
+    ul.pages
+      li
+      li.active
+      li
+      li
+      li

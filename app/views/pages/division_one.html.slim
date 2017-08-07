@@ -1,0 +1,197 @@
+= render "right_bar"
+
+.one-wrap
+
+  .one-top-part
+    .row
+      .columns
+        .top-part
+          .share-container
+            .share-btn
+              = inline_svg "svg/share.svg"
+              p поділитись
+            = render "share_window"
+          .product-features-btn
+            = inline_svg "svg/features.svg"
+            p технічні параметри
+          a.download-pdf href=asset_url("photo/pl-404-active.jpg") download=""
+            = inline_svg "svg/file-download"
+            p скачати pdf
+          a.all-videos-link
+            = inline_svg "svg/play-video-btn.svg"
+            p всі відео
+          p.huge-title Світлодіодні дисплеї
+          p Світлодіо́дний диспле́й (англ. LED screen, LED display) — пристрій відображення і передачі візуальної інформації, в якому кожною точкою, пікселем є один або кілька напівпровідникових світлодіодів (Light Emitting Diode).
+          .btn.order-btn замовити
+
+  .one-main-part
+    .row
+      .columns
+        .video-wrap.full
+          .video
+            iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+            .play-btn = inline_svg "svg/play-button.svg"
+            .text
+              .name Morrіcone. Wіllіams. Zіmmer - Legends of Fіlm Musіc
+              .tag варшава
+              .tag панська гора
+              .tag у пані лесі
+        .name Morrіcone. Wіllіams. Zіmmer - Legends of Fіlm Musіc
+
+      .columns.large-4
+        ul.short-info-list
+          li
+            .small рік
+            .regular 2107
+          li
+            .small місце
+            .regular Львів
+          li
+            .small подія
+            .regular Концерт
+      .columns.large-7
+        .white-p
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error perferendis dignissimos rerum, eius voluptate necessitatibus quam obcaecati explicabo aliquam quisquam quia consequatur nihil tenetur asperiores illo dicta. Tempore, amet recusandae!
+          p Eius voluptate necessitatibus quam obcaecati explicabo aliquam quisquam quia consequatur nihil tenetur asperiores illo dicta. Tempore, amet recusandae!
+        .share-container
+          .share-btn
+            = inline_svg "svg/share.svg"
+            p поділитись
+          = render "share_window"
+
+  .video-gallery-wrapper
+
+    p.section-title Інші відео
+    .vertical-line
+
+    .row.video-row
+      .columns.large-4.float-right
+        h2 Світодіодні дисплеї на вечірі танго
+        p.short-details
+          | Ресторан «Соната»
+          span м. Львів
+          span 2017
+        p В наш час різноманітні спеціальні ефекти оточують нас на кожному кроці. І, в більшості випадків, ми навіть не звертаємо на це уваги, бо вони настільки стали частиною нашого життя, що ми їх на них просто не звертаємо уваги. Мелодія дзвінка мобільного телефону чи кольорові вогні світлофора, яскравий кольоровий рекламний білборд чи мультимедійні екрани в вітринах супермаркетів все це відноситься до повсякденних спеціальних ефектів.
+        .share-container
+          .share-btn
+            = inline_svg "svg/share.svg"
+            p поділитись
+          = render "share_window"
+      .columns.large-7.float-left
+        .video-wrap.full
+          .video
+            iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+            .play-btn = inline_svg "svg/play-button.svg"
+        .tag варшава
+        .tag панська гора
+        .tag у пані лесі
+    .row.video-row
+      .columns.large-4
+        h2 Світодіодні дисплеї на вечірі танго
+        p.short-details
+          | Ресторан «Соната»
+          span м. Львів
+          span 2017
+        p В наш час різноманітні спеціальні ефекти оточують нас на кожному кроці. І, в більшості випадків, ми навіть не звертаємо на це уваги, бо вони настільки стали частиною нашого життя, що ми їх на них просто не звертаємо уваги. Мелодія дзвінка мобільного телефону чи кольорові вогні світлофора, яскравий кольоровий рекламний білборд чи мультимедійні екрани в вітринах супермаркетів все це відноситься до повсякденних спеціальних ефектів.
+        .share-container
+          .share-btn
+            = inline_svg "svg/share.svg"
+            p поділитись
+          = render "share_window"
+      .columns.large-7
+        .video-wrap.full
+          .video
+            iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+            .play-btn = inline_svg "svg/play-button.svg"
+        .tag варшава
+        .tag панська гора
+        .tag у пані лесі
+    .row.video-row
+      .columns.large-4.float-right
+        h2 Світодіодні дисплеї на вечірі танго
+        p.short-details
+          | Ресторан «Соната»
+          span м. Львів
+          span 2017
+        p В наш час різноманітні спеціальні ефекти оточують нас на кожному кроці. І, в більшості випадків, ми навіть не звертаємо на це уваги, бо вони настільки стали частиною нашого життя, що ми їх на них просто не звертаємо уваги. Мелодія дзвінка мобільного телефону чи кольорові вогні світлофора, яскравий кольоровий рекламний білборд чи мультимедійні екрани в вітринах супермаркетів все це відноситься до повсякденних спеціальних ефектів.
+        .share-container
+          .share-btn
+            = inline_svg "svg/share.svg"
+            p поділитись
+          = render "share_window"
+      .columns.large-7.float-left.end
+        .video-wrap.full
+          .video
+            iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          .video-cover style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+            .play-btn = inline_svg "svg/play-button.svg"
+        .tag варшава
+        .tag панська гора
+        .tag у пані лесі
+
+.photo-gallery.collage-wrapper#animated-thumbnails
+
+  p.section-title Фотогалерея
+  .vertical-line
+
+  .row
+    .columns
+
+      a.img-container.lg-object href=asset_path('photo/main-banner-bg-6.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-6.jpg')})"
+        img src=asset_path('photo/main-banner-bg-6.jpg')
+      .clearfix.collage-container
+        .floated
+          a.square.fullwidth.lg-object href=asset_path('photo/main-banner-bg-1.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-1.jpg')})"
+            img src=asset_path('photo/main-banner-bg-1.jpg')
+            .pinterest-btn Save
+        .floated.clearfix
+          a.square.lg-object href=asset_path('photo/main-banner-bg-2.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+            img src=asset_path('photo/main-banner-bg-2.jpg')
+            .pinterest-btn Save
+          a.square.lg-object href=asset_path('photo/main-banner-bg-3.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-3.jpg')})"
+            img src=asset_path('photo/main-banner-bg-3.jpg')
+            .pinterest-btn Save
+          a.square.lg-object href=asset_path('photo/main-banner-bg-4.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-4.jpg')})"
+            img src=asset_path('photo/main-banner-bg-4.jpg')
+            .pinterest-btn Save
+          a.square.lg-object href=asset_path('photo/main-banner-bg-5.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-5.jpg')})"
+            img src=asset_path('photo/main-banner-bg-5.jpg')
+            .pinterest-btn Save
+        .floated.clearfix
+          a.square.lg-object href=asset_path('photo/main-banner-bg-2.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+            img src=asset_path('photo/main-banner-bg-2.jpg')
+            .pinterest-btn Save
+          a.square.lg-object href=asset_path('photo/main-banner-bg-6.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-6.jpg')})"
+            img src=asset_path('photo/main-banner-bg-6.jpg')
+            .pinterest-btn Save
+        .floated.clearfix
+          a.square.lg-object href=asset_path('photo/main-banner-bg-1.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-1.jpg')})"
+            img src=asset_path('photo/main-banner-bg-1.jpg')
+            .pinterest-btn Save
+          a.square.lg-object href=asset_path('photo/main-banner-bg-2.jpg') style="background-image: url(#{asset_path('photo/main-banner-bg-2.jpg')})"
+            img src=asset_path('photo/main-banner-bg-2.jpg')
+            .pinterest-btn Save
+  
+form.order-form-container
+  .row
+    .columns.medium-10.medium-centered.large-8
+      p.title Отримати подарунок
+      .row
+        .columns.medium-6
+          .input-field
+            input placeholder="Ваше ім'я" name="name"
+          .input-field
+            input placeholder="Номер телефону"
+          .input-field
+            input placeholder="Емейл" type="email" name="email"
+          .input-field
+            input.datepicker placeholder="Виберіть дату"
+            .icon = inline_svg "svg/calendar.svg"
+        .columns.medium-6
+          .input-field.textarea-field
+            textarea rows="7" placeholder="Додаткова інформація"
+        .button-holder
+          button.curved-border-btn замовити
